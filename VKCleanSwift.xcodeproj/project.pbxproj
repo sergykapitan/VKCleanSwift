@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8815244D22B81F9D00A029F1 /* NetworkServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8815244C22B81F9D00A029F1 /* NetworkServise.swift */; };
+		8815245022B8213D00A029F1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8815244F22B8213D00A029F1 /* API.swift */; };
 		8821C26122B7D7F4007834A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8821C26022B7D7F4007834A8 /* AppDelegate.swift */; };
 		8821C26822B7D7F5007834A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8821C26722B7D7F5007834A8 /* Assets.xcassets */; };
 		8821C26B22B7D7F6007834A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8821C26922B7D7F6007834A8 /* LaunchScreen.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8815244C22B81F9D00A029F1 /* NetworkServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServise.swift; sourceTree = "<group>"; };
+		8815244F22B8213D00A029F1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8821C25D22B7D7F4007834A8 /* VKCleanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKCleanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8821C26022B7D7F4007834A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8821C26722B7D7F5007834A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8815244E22B820DF00A029F1 /* FeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8821C27E22B7F720007834A8 /* FeedViewController.swift */,
+				8821C28022B7F737007834A8 /* FeedViewController.storyboard */,
+			);
+			path = FeedViewController;
+			sourceTree = "<group>";
+		};
 		8821C25422B7D7F4007834A8 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +82,7 @@
 				8821C26022B7D7F4007834A8 /* AppDelegate.swift */,
 				8821C27822B7DF20007834A8 /* Servise */,
 				8821C27D22B7E5B1007834A8 /* Auth */,
+				8815244E22B820DF00A029F1 /* FeedViewController */,
 				8821C28422B7FBC1007834A8 /* Helpers */,
 				8821C26722B7D7F5007834A8 /* Assets.xcassets */,
 				8821C26922B7D7F6007834A8 /* LaunchScreen.storyboard */,
@@ -89,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				8821C27622B7DF04007834A8 /* AuthServise.swift */,
-				8821C27E22B7F720007834A8 /* FeedViewController.swift */,
-				8821C28022B7F737007834A8 /* FeedViewController.storyboard */,
+				8815244C22B81F9D00A029F1 /* NetworkServise.swift */,
+				8815244F22B8213D00A029F1 /* API.swift */,
 			);
 			path = Servise;
 			sourceTree = "<group>";
@@ -206,11 +220,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8815244D22B81F9D00A029F1 /* NetworkServise.swift in Sources */,
 				8821C27A22B7E568007834A8 /* AuthViewController.swift in Sources */,
 				8821C28322B7FB96007834A8 /* UIViewController_Storybord.swift in Sources */,
 				8821C26122B7D7F4007834A8 /* AppDelegate.swift in Sources */,
 				8821C27F22B7F720007834A8 /* FeedViewController.swift in Sources */,
 				8821C27722B7DF04007834A8 /* AuthServise.swift in Sources */,
+				8815245022B8213D00A029F1 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
