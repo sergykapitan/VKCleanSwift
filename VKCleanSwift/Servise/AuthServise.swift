@@ -19,7 +19,7 @@ protocol AuthServiseDelegate: class {
 final class AuthServise: NSObject, VKSdkDelegate, VKSdkUIDelegate {
 
   
-    private let appId = "7024154"
+    private let appId = "3521265"
     private let vkSdk: VKSdk
     
     weak var delegate: AuthServiseDelegate?
@@ -38,7 +38,7 @@ final class AuthServise: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     
     func wakeUpSession() {
         
-        let scope = ["offline"]
+        let scope = ["offline","photos","wall","friends"]
         
         VKSdk.wakeUpSession(scope) {[mydelegate = delegate] (state, error) in
             if state == VKAuthorizationState.authorized {
