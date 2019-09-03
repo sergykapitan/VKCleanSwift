@@ -25,7 +25,16 @@ class NewsFeedInteractor: NewsFeedBusinessLogic {
     func makeRequest(request: NewsFeed.Model.Request.RequestType) {
         if service == nil {
             service = NewsFeedService()
-        
+        }
+        switch request {
+      
+        case .some:
+            print(".some Interactor")
+            presenter?.presentData(response: .some)
+        case .getFeed:
+            print(".getFeed Interactor")
+            presenter?.presentData(response: .presentNewsFeed)
+       
         }
     }
 }
