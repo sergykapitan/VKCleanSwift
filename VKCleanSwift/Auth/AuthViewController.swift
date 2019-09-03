@@ -14,15 +14,10 @@ class AuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //authServise = AuthServise()
         authServise = AppDelegate.shared().authServise
     }
-    
-
     @IBAction func signInTouch() {
-        print("123")
         authServise.wakeUpSession()
     }
     
-
 }

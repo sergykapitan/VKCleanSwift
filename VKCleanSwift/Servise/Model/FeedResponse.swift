@@ -17,16 +17,15 @@ struct FeedResponse: Decodable {
 }
 
 struct FeedItem: Decodable {
-    let sourse_id: Int
-//    let post_id: Int
-//    let text: String?
-//    let date: Double
-//    let comments: CountableItem?
-//    let likes: CountableItem?
-//    let repost: CountableItem?
-//    let views: CountableItem?
-//
-    
+    let type: String?
+    let sourceId: Int
+    let postId: Int
+    let text: String?
+    let date: Double
+    let comments: CountableItem?
+    let likes: CountableItem?
+    let repost: CountableItem?
+    let views: CountableItem?
 }
 
 struct CountableItem: Decodable {
