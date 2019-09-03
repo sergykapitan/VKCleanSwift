@@ -17,8 +17,6 @@
 		8821C27722B7DF04007834A8 /* AuthServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8821C27622B7DF04007834A8 /* AuthServise.swift */; };
 		8821C27A22B7E568007834A8 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8821C27922B7E568007834A8 /* AuthViewController.swift */; };
 		8821C27C22B7E57A007834A8 /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8821C27B22B7E57A007834A8 /* AuthViewController.storyboard */; };
-		8821C27F22B7F720007834A8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8821C27E22B7F720007834A8 /* FeedViewController.swift */; };
-		8821C28122B7F737007834A8 /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8821C28022B7F737007834A8 /* FeedViewController.storyboard */; };
 		8821C28322B7FB96007834A8 /* UIViewController_Storybord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8821C28222B7FB96007834A8 /* UIViewController_Storybord.swift */; };
 		88792D0F231E7E2D00C4AEE6 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88792D0E231E7E2D00C4AEE6 /* NetworkDataFetcher.swift */; };
 		88792D17231E893100C4AEE6 /* NewsFeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88792D11231E893100C4AEE6 /* NewsFeedInteractor.swift */; };
@@ -45,8 +43,6 @@
 		8821C27622B7DF04007834A8 /* AuthServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServise.swift; sourceTree = "<group>"; };
 		8821C27922B7E568007834A8 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		8821C27B22B7E57A007834A8 /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
-		8821C27E22B7F720007834A8 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		8821C28022B7F737007834A8 /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
 		8821C28222B7FB96007834A8 /* UIViewController_Storybord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Storybord.swift; sourceTree = "<group>"; };
 		88792D0E231E7E2D00C4AEE6 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		88792D11231E893100C4AEE6 /* NewsFeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedInteractor.swift; sourceTree = "<group>"; };
@@ -72,15 +68,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8815244E22B820DF00A029F1 /* FeedViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8821C27E22B7F720007834A8 /* FeedViewController.swift */,
-				8821C28022B7F737007834A8 /* FeedViewController.storyboard */,
-			);
-			path = FeedViewController;
-			sourceTree = "<group>";
-		};
 		8815245122B9088600A029F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +100,6 @@
 				8821C27822B7DF20007834A8 /* Servise */,
 				8821C27D22B7E5B1007834A8 /* Auth */,
 				88792D10231E88CE00C4AEE6 /* NewsFeed */,
-				8815244E22B820DF00A029F1 /* FeedViewController */,
 				8821C28422B7FBC1007834A8 /* Helpers */,
 				8821C26722B7D7F5007834A8 /* Assets.xcassets */,
 				8821C26922B7D7F6007834A8 /* LaunchScreen.storyboard */,
@@ -247,7 +233,6 @@
 				88792D26231EC69C00C4AEE6 /* NewsFeedCell.xib in Resources */,
 				8821C27C22B7E57A007834A8 /* AuthViewController.storyboard in Resources */,
 				8821C26822B7D7F5007834A8 /* Assets.xcassets in Resources */,
-				8821C28122B7F737007834A8 /* FeedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +272,6 @@
 				88792D19231E893100C4AEE6 /* NewsFeedPresenter.swift in Sources */,
 				8821C28322B7FB96007834A8 /* UIViewController_Storybord.swift in Sources */,
 				8821C26122B7D7F4007834A8 /* AppDelegate.swift in Sources */,
-				8821C27F22B7F720007834A8 /* FeedViewController.swift in Sources */,
 				88792D0F231E7E2D00C4AEE6 /* NetworkDataFetcher.swift in Sources */,
 				8821C27722B7DF04007834A8 /* AuthServise.swift in Sources */,
 				8815245022B8213D00A029F1 /* API.swift in Sources */,
