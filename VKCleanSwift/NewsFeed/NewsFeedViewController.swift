@@ -52,9 +52,7 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic {
     
     func displayData(viewModel: NewsFeed.Model.ViewModel.ViewModelData) {
         switch viewModel {
-      
-        case .some:
-            print(".some ViewController")
+
         case .displayNewsFeed(let feedViewModel):
             self.feedViewModel = feedViewModel
             table.reloadData()
@@ -77,7 +75,6 @@ extension NewsFeedViewController: UITableViewDelegate,UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Select Row")
-        interactor?.makeRequest(request: .some)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 212

@@ -28,11 +28,7 @@ class NewsFeedPresenter: NewsFeedPresentationLogic {
     
     func presentData(response: NewsFeed.Model.Response.ResponseType) {
         switch response {
-      
-        case .some:
-            print(".some Presenter")
-          
-      
+
         case .presentNewsFeed(let feed):
             let cells = feed.items.map { (feedItem)  in
                 cellViewModel(from: feedItem, profiles: feed.profiles, groups: feed.groups)
