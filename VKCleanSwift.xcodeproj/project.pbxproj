@@ -29,6 +29,7 @@
 		88792D24231EC63A00C4AEE6 /* NewsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88792D23231EC63A00C4AEE6 /* NewsFeedCell.swift */; };
 		88792D26231EC69C00C4AEE6 /* NewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88792D25231EC69C00C4AEE6 /* NewsFeedCell.xib */; };
 		88AEDE7C231F8E9400D4C052 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 88AEDE7B231F8E9400D4C052 /* .gitignore */; };
+		88AEDE7E231F90A400D4C052 /* WedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEDE7D231F90A400D4C052 /* WedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		88792D23231EC63A00C4AEE6 /* NewsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCell.swift; sourceTree = "<group>"; };
 		88792D25231EC69C00C4AEE6 /* NewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedCell.xib; sourceTree = "<group>"; };
 		88AEDE7B231F8E9400D4C052 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		88AEDE7D231F90A400D4C052 /* WedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				8821C28222B7FB96007834A8 /* UIViewController_Storybord.swift */,
+				88AEDE7D231F90A400D4C052 /* WedImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				88792D0F231E7E2D00C4AEE6 /* NetworkDataFetcher.swift in Sources */,
 				8821C27722B7DF04007834A8 /* AuthServise.swift in Sources */,
 				8815245022B8213D00A029F1 /* API.swift in Sources */,
+				88AEDE7E231F90A400D4C052 /* WedImageView.swift in Sources */,
 				88792D17231E893100C4AEE6 /* NewsFeedInteractor.swift in Sources */,
 				88792D18231E893100C4AEE6 /* NewsFeedModels.swift in Sources */,
 				88792D24231EC63A00C4AEE6 /* NewsFeedCell.swift in Sources */,
