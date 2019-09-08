@@ -36,13 +36,10 @@ class NewsFeedInteractor: NewsFeedBusinessLogic {
        
         case .getNewsFeed:
             fetcher.getFeed { [weak self] (feedResponse) in
-                
-//                feedResponse?.profiles.map({ (profile) in
-//                   // print("\(profile)\n\n")
+
+//                feedResponse?.items.map({ (feedItem) in
+//                    print("\(feedItem.attachments)\n\n")
 //                })
-                feedResponse?.groups.map({ (group) in
-                    print("\(group)\n\n")
-                })
                 
                 
                 guard let feedResponce = feedResponse else {return}

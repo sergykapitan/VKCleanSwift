@@ -14,10 +14,10 @@ class WebImageView: UIImageView {
         guard let url = URL(string: imageUrl) else { return }
         if let cachedResponse = URLCache.shared.cachedResponse(for: URLRequest(url: url)) {
             self.image = UIImage(data: cachedResponse.data)
-            print("from cache")
+           // print("from cache")
             return
         }
-            print("from inet")
+           // print("from inet")
         let dataTask = URLSession.shared.dataTask(with: url) { [weak self](data, response, error) in
             DispatchQueue.main.async {
                 if let data = data, let response = response {
