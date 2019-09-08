@@ -31,6 +31,9 @@ class NewsFeedCell: UITableViewCell {
     static let reuseID = "NewsFeedCell"
     
     // MARK: - Outlets
+    
+    @IBOutlet var cardView: UIView!
+    
     @IBOutlet var iconImageView: WebImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
@@ -52,6 +55,11 @@ class NewsFeedCell: UITableViewCell {
         super.awakeFromNib()
         iconImageView.layer.cornerRadius = iconImageView.frame.width / 2
         iconImageView.clipsToBounds = true
+        
+        cardView.layer.cornerRadius = 10
+        cardView.clipsToBounds = true
+        backgroundColor = .clear
+        selectionStyle = .none
         
         
     }
