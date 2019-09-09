@@ -19,6 +19,10 @@ protocol NewsFeedPresentationLogic {
 class NewsFeedPresenter: NewsFeedPresentationLogic {
     
     weak var viewController: NewsFeedDisplayLogic?
+    
+    
+    var cellLayoutCalculate: FeedCellLayoutCalculateProtocol = NewsFeedCellLayoutCalculate()
+    
     let dateFormatter: DateFormatter = {
         let dt = DateFormatter()
         dt.locale = Locale(identifier: "ru_RU")
@@ -44,9 +48,12 @@ class NewsFeedPresenter: NewsFeedPresentationLogic {
         
         
         let photoAttachment = self.photoAttachment(feedItem: feedItem)
+        
         let profile = self.profile(for: feedItem.sourceId, profiles: profiles, groups: groups)
         let date = Date(timeIntervalSince1970: feedItem.date)
         let dateTitle = dateFormatter.string(from: date)
+        
+        let sizes = cellLayoutCalculate.sizes(postText: feedItem.text, photoAttachment: photoAttachment )
         
         return FeedViewModel.Cell.init(iconUrlString: profile.photo,
                                        name: profile.name,
@@ -56,7 +63,8 @@ class NewsFeedPresenter: NewsFeedPresentationLogic {
                                        comments: String(feedItem.comments?.count ?? 0),
                                        shares: String(feedItem.repost?.count ?? 0),
                                        views: String(feedItem.views?.count ?? 0),
-                                       photoAttachment: photoAttachment
+                                       photoAttachment: photoAttachment,
+                                       sizes: sizes
         )
     }
     private func profile(for sourceId: Int, profiles: [Profile], groups: [Group]) -> ProfilePresentable {
@@ -67,14 +75,12 @@ class NewsFeedPresenter: NewsFeedPresentationLogic {
         }
         return profileRepresentable!
     }
-    private func photoAttachment(feedItem: FeedItem) -> FeedViewModel.FeedCellPhotoAttachment? {
+    
+    private func photoAttachment(feedItem: FeedItem) -> FeedViewModel.FeedCellPhotoAttachment?{
         guard let photos = feedItem.attachments?.compactMap({ (attachment) in
             attachment.photo
-        }), let firstPhoto = photos.first else {
-            return nil
-        }
-        return FeedViewModel.FeedCellPhotoAttachment.init(photoUrlString: firstPhoto.scrBIG,
-                                                          widht: firstPhoto.wight,
-                                                          height: firstPhoto.height)
+        }), let firstPhoto = photos.first else { return nil} //FeedViewModel.FeedCellPhotoAttachment.init(photoUrlString: "wrong", widht: 0, height: 0) }
+       
+        return FeedViewModel.FeedCellPhotoAttachment.init(photoUrlString: firstPhoto.scrBIG, widht: firstPhoto.wight, height: firstPhoto.height)
     }
 }

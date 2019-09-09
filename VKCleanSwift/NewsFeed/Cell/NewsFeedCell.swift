@@ -19,12 +19,20 @@ protocol FeedCellViewModel {
     var shares: String? { get }
     var views: String? { get }
     var photoAttachment: FeedCellPhotoAtachmentViewModel? { get }
+    var sizes: FeedCellSizes { get }
+}
+protocol FeedCellSizes {
+    var postLabelFrame: CGRect { get }
+    var attachmentFrame: CGRect { get }
+    var bottomView: CGRect { get }
+    var totalHeight: CGFloat { get }
 }
 protocol FeedCellPhotoAtachmentViewModel {
     var photoUrlString: String? { get }
     var widht: Int { get }
     var height: Int { get }
 }
+
 
 class NewsFeedCell: UITableViewCell {
     
@@ -46,14 +54,18 @@ class NewsFeedCell: UITableViewCell {
     @IBOutlet var shareLabel: UILabel!
     @IBOutlet var viewsLabel: UILabel!
     
+    @IBOutlet var bottomView: UIView!
     
     
-    
+    override func prepareForReuse() {
+        iconImageView.set(imageUrl: nil)
+        postimageview.set(imageUrl: nil)
+    }
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        iconImageView.layer.cornerRadius = iconImageView.frame.width / 2
+        iconImageView.layer.cornerRadius = 5
         iconImageView.clipsToBounds = true
         
         cardView.layer.cornerRadius = 10
@@ -73,6 +85,14 @@ class NewsFeedCell: UITableViewCell {
         commentLabel.text = viewModel.comments
         shareLabel.text = viewModel.shares
         viewsLabel.text = viewModel.views
+        
+        postLabel.frame = viewModel.sizes.postLabelFrame
+        postimageview.frame = viewModel.sizes.attachmentFrame
+        
+        bottomView.frame = viewModel.sizes.bottomView
+        
+        
+        
         if let photoAttachment = viewModel.photoAttachment {
             postimageview.set(imageUrl: photoAttachment.photoUrlString)
             postimageview.isHidden = false
