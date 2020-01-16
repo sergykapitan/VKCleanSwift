@@ -17,15 +17,6 @@ struct Sizes: FeedCellSizes {
     var attachmentFrame: CGRect
     
 }
-struct Constants {
-    static let cardInsets = UIEdgeInsets(top: 0, left: 8, bottom: 12, right: 8)
-    static let topViewHeight: CGFloat = 40
-    static let postLabelInsets = UIEdgeInsets(top: 8 + Constants.topViewHeight + 8, left: 8, bottom: 8, right: 8)
-    static let postLabelFont = UIFont.systemFont(ofSize: 15)
-    static let bottomViewHieght: CGFloat = 58
-}
-
-
 
 protocol FeedCellLayoutCalculateProtocol {
      func sizes(postText: String?, photoAttachment: FeedCellPhotoAtachmentViewModel?) -> FeedCellSizes

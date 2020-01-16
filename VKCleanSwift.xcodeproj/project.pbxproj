@@ -32,6 +32,9 @@
 		88792D26231EC69C00C4AEE6 /* NewsFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88792D25231EC69C00C4AEE6 /* NewsFeedCell.xib */; };
 		88AEDE7C231F8E9400D4C052 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 88AEDE7B231F8E9400D4C052 /* .gitignore */; };
 		88AEDE7E231F90A400D4C052 /* WedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEDE7D231F90A400D4C052 /* WedImageView.swift */; };
+		88E420C723263CDA00638561 /* NewsFeedCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E420C623263CDA00638561 /* NewsFeedCodeCell.swift */; };
+		88E420C9232644FD00638561 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E420C8232644FD00638561 /* Constraints.swift */; };
+		88E420CB232665DC00638561 /* Constats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E420CA232665DC00638561 /* Constats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		88792D25231EC69C00C4AEE6 /* NewsFeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedCell.xib; sourceTree = "<group>"; };
 		88AEDE7B231F8E9400D4C052 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		88AEDE7D231F90A400D4C052 /* WedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WedImageView.swift; sourceTree = "<group>"; };
+		88E420C623263CDA00638561 /* NewsFeedCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCodeCell.swift; sourceTree = "<group>"; };
+		88E420C8232644FD00638561 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		88E420CA232665DC00638561 /* Constats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 				8821C28222B7FB96007834A8 /* UIViewController_Storybord.swift */,
 				88AEDE7D231F90A400D4C052 /* WedImageView.swift */,
 				88405E1A2325898C00337D6B /* String + Hieght.swift */,
+				88E420C8232644FD00638561 /* Constraints.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -175,8 +182,10 @@
 			isa = PBXGroup;
 			children = (
 				88792D23231EC63A00C4AEE6 /* NewsFeedCell.swift */,
+				88E420C623263CDA00638561 /* NewsFeedCodeCell.swift */,
 				88792D25231EC69C00C4AEE6 /* NewsFeedCell.xib */,
 				88405E18232539DF00337D6B /* NewsFeedCellLayoutCalculate.swift */,
+				88E420CA232665DC00638561 /* Constats.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -279,6 +288,7 @@
 			files = (
 				8815245322B908A900A029F1 /* FeedResponse.swift in Sources */,
 				88792D1A231E893100C4AEE6 /* NewsFeedRouter.swift in Sources */,
+				88E420C723263CDA00638561 /* NewsFeedCodeCell.swift in Sources */,
 				8815244D22B81F9D00A029F1 /* NetworkServise.swift in Sources */,
 				8821C27A22B7E568007834A8 /* AuthViewController.swift in Sources */,
 				88792D1C231E893100C4AEE6 /* NewsFeedWorker.swift in Sources */,
@@ -287,7 +297,9 @@
 				8821C26122B7D7F4007834A8 /* AppDelegate.swift in Sources */,
 				88792D0F231E7E2D00C4AEE6 /* NetworkDataFetcher.swift in Sources */,
 				8821C27722B7DF04007834A8 /* AuthServise.swift in Sources */,
+				88E420CB232665DC00638561 /* Constats.swift in Sources */,
 				8815245022B8213D00A029F1 /* API.swift in Sources */,
+				88E420C9232644FD00638561 /* Constraints.swift in Sources */,
 				88AEDE7E231F90A400D4C052 /* WedImageView.swift in Sources */,
 				88792D17231E893100C4AEE6 /* NewsFeedInteractor.swift in Sources */,
 				88405E1B2325898C00337D6B /* String + Hieght.swift in Sources */,
