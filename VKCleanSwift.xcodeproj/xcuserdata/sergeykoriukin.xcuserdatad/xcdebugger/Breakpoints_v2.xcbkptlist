@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "45193B92-98DA-4110-9A1E-42DFDE47F77E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "720E1B75-DB5B-41F8-9D03-A0CD9DC5A177"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKCleanSwift/Auth/AuthViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "720E1B75-DB5B-41F8-9D03-A0CD9DC5A177 - 5112ca728c93c32"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKCleanSwift.AuthViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; VKCleanSwift.AuthViewController"
+                  moduleName = "VKCleanSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeykoriukin/Documents/GitHub/VKCleanSwift/VKCleanSwift/Auth/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "720E1B75-DB5B-41F8-9D03-A0CD9DC5A177 - 1964cbb853361c69"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKCleanSwift.AuthViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; VKCleanSwift.AuthViewController"
+                  moduleName = "VKCleanSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeykoriukin/Documents/GitHub/VKCleanSwift/VKCleanSwift/Auth/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "182">
+               </Location>
+               <Location
+                  uuid = "720E1B75-DB5B-41F8-9D03-A0CD9DC5A177 - a5fafaf81464ea55"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKCleanSwift.AuthViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;VKCleanSwift.AuthViewController&gt;"
+                  moduleName = "VKCleanSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeykoriukin/Documents/GitHub/VKCleanSwift/VKCleanSwift/Auth/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "720E1B75-DB5B-41F8-9D03-A0CD9DC5A177 - 7996040ec2ab0962"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKCleanSwift.AuthViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;VKCleanSwift.AuthViewController&gt;"
+                  moduleName = "VKCleanSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeykoriukin/Documents/GitHub/VKCleanSwift/VKCleanSwift/Auth/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  uuid = "720E1B75-DB5B-41F8-9D03-A0CD9DC5A177 - 50c5f8790c597cb"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKCleanSwift.AuthViewController.__deallocating_deinit"
+                  moduleName = "VKCleanSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergeykoriukin/Documents/GitHub/VKCleanSwift/VKCleanSwift/Auth/AuthViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
