@@ -3,12 +3,13 @@ import UIKit
 
 @IBDesignable
 open class TKTransitionSubmitButton : UIButton, UIViewControllerTransitioningDelegate, CAAnimationDelegate {
-    
+     
     lazy var spiner: SpinerLayer! = {
         let s = SpinerLayer(frame: self.frame)
         return s
     }()
-    
+    private var shadowLayer: CAShapeLayer!
+
     @IBInspectable open var spinnerColor: UIColor = UIColor.white {
         didSet {
             spiner.spinnerColor = spinnerColor
@@ -131,4 +132,29 @@ open class TKTransitionSubmitButton : UIButton, UIViewControllerTransitioningDel
         layer.add(expandAnim, forKey: expandAnim.keyPath)
     }
     
+    
+    
+}
+extension TKTransitionSubmitButton {
+  
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
+            shadowLayer.fillColor = #colorLiteral(red: 0.3333333333, green: 0.7254901961, blue: 0.9529411765, alpha: 1)//UIColor.white.cgColor
+
+            shadowLayer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)//UIColor.darkGray.cgColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+            shadowLayer.shadowOpacity = 0.0
+            shadowLayer.shadowRadius = 2
+           // btn.frame.bottom = self.view.frame.height - 60
+           //btn.setTitle("Sign in", for: UIControl.State())
+            layer.insertSublayer(shadowLayer, at: 0)
+            //layer.insertSublayer(shadowLayer, below: nil) // also works
+        }
+    }
 }

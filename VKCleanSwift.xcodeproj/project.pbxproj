@@ -20,6 +20,7 @@
 		8821C28322B7FB96007834A8 /* UIViewController_Storybord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8821C28222B7FB96007834A8 /* UIViewController_Storybord.swift */; };
 		88405E19232539DF00337D6B /* NewsFeedCellLayoutCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88405E18232539DF00337D6B /* NewsFeedCellLayoutCalculate.swift */; };
 		88405E1B2325898C00337D6B /* String + Hieght.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88405E1A2325898C00337D6B /* String + Hieght.swift */; };
+		88516BC5244DC47F001A7004 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88516BC4244DC47F001A7004 /* CustomButton.swift */; };
 		88792D0F231E7E2D00C4AEE6 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88792D0E231E7E2D00C4AEE6 /* NetworkDataFetcher.swift */; };
 		88792D17231E893100C4AEE6 /* NewsFeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88792D11231E893100C4AEE6 /* NewsFeedInteractor.swift */; };
 		88792D18231E893100C4AEE6 /* NewsFeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88792D12231E893100C4AEE6 /* NewsFeedModels.swift */; };
@@ -58,6 +59,7 @@
 		8821C28222B7FB96007834A8 /* UIViewController_Storybord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Storybord.swift; sourceTree = "<group>"; };
 		88405E18232539DF00337D6B /* NewsFeedCellLayoutCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCellLayoutCalculate.swift; sourceTree = "<group>"; };
 		88405E1A2325898C00337D6B /* String + Hieght.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Hieght.swift"; sourceTree = "<group>"; };
+		88516BC4244DC47F001A7004 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		88792D0E231E7E2D00C4AEE6 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		88792D11231E893100C4AEE6 /* NewsFeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedInteractor.swift; sourceTree = "<group>"; };
 		88792D12231E893100C4AEE6 /* NewsFeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedModels.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				8821C27922B7E568007834A8 /* AuthViewController.swift */,
 				8821C27B22B7E57A007834A8 /* AuthViewController.storyboard */,
+				88516BC4244DC47F001A7004 /* CustomButton.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				887BD4A4244C613800DDB037 /* TransitionSubmitButton.swift in Sources */,
 				8815245322B908A900A029F1 /* FeedResponse.swift in Sources */,
+				88516BC5244DC47F001A7004 /* CustomButton.swift in Sources */,
 				88792D1A231E893100C4AEE6 /* NewsFeedRouter.swift in Sources */,
 				88E420C723263CDA00638561 /* NewsFeedCodeCell.swift in Sources */,
 				8815244D22B81F9D00A029F1 /* NetworkServise.swift in Sources */,
@@ -403,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -458,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -479,6 +483,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = VKCleanSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,6 +506,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = VKCleanSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
