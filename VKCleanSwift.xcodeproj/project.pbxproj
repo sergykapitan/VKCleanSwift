@@ -94,6 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		880F5730245D7EC200252DEE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8821C26022B7D7F4007834A8 /* AppDelegate.swift */,
+				8821C26722B7D7F5007834A8 /* Assets.xcassets */,
+				8821C26922B7D7F6007834A8 /* LaunchScreen.storyboard */,
+				8821C26C22B7D7F6007834A8 /* Info.plist */,
+				88AEDE7B231F8E9400D4C052 /* .gitignore */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		8815245122B9088600A029F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,15 +134,11 @@
 		8821C25F22B7D7F4007834A8 /* VKCleanSwift */ = {
 			isa = PBXGroup;
 			children = (
-				8821C26022B7D7F4007834A8 /* AppDelegate.swift */,
+				880F5730245D7EC200252DEE /* App */,
 				8821C27822B7DF20007834A8 /* Servise */,
 				8821C27D22B7E5B1007834A8 /* Auth */,
 				88792D10231E88CE00C4AEE6 /* NewsFeed */,
 				8821C28422B7FBC1007834A8 /* Helpers */,
-				8821C26722B7D7F5007834A8 /* Assets.xcassets */,
-				8821C26922B7D7F6007834A8 /* LaunchScreen.storyboard */,
-				8821C26C22B7D7F6007834A8 /* Info.plist */,
-				88AEDE7B231F8E9400D4C052 /* .gitignore */,
 			);
 			path = VKCleanSwift;
 			sourceTree = "<group>";
@@ -482,7 +490,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = VKCleanSwift/Info.plist;
+				INFOPLIST_FILE = VKCleanSwift/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,7 +513,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = VKCleanSwift/Info.plist;
+				INFOPLIST_FILE = VKCleanSwift/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
