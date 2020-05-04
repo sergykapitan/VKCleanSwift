@@ -14,13 +14,14 @@ class AuthViewController: UIViewController ,UIViewControllerTransitioningDelegat
     var button: TKTransitionSubmitButton!
     
   //  @IBOutlet weak var btnFromNib: TKTransitionSubmitButton!
+    @IBOutlet weak var imageLogo: TKTransitionSubmitButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.setStatusBarStyle(.lightContent, animated: false)
         
 
-        
+               
                button = TKTransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 64, height: 44))
                button.center = self.view.center
                button.setTitle("Sign in", for: UIControl.State())
@@ -30,8 +31,12 @@ class AuthViewController: UIViewController ,UIViewControllerTransitioningDelegat
                button.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.7254901961, blue: 0.9529411765, alpha: 1)
              
                self.view.addSubview(button)
-        
-        authServise = AppDelegate.shared().authServise
+               button.isHidden = true
+               imageLogo.animate(3) {
+                self.button.isHidden = false
+                self.imageLogo.isHidden = true
+               }
+               authServise = AppDelegate.shared().authServise
     }
     @IBAction func signInTouch(_ button: TKTransitionSubmitButton) {
         button.animate(1) {

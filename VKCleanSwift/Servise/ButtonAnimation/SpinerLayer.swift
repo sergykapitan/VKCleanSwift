@@ -38,7 +38,7 @@ class SpinerLayer: CAShapeLayer {
         let rotate = CABasicAnimation(keyPath: "transform.rotation.z")
         rotate.fromValue = 0
         rotate.toValue = Double.pi * 2
-        rotate.duration = 0.4
+        rotate.duration = 0.8
         rotate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         
         rotate.repeatCount = HUGE

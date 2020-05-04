@@ -63,10 +63,10 @@ final class NewsFeedCodeCell: UITableViewCell {
         
         
         if let photoAttachment = viewModel.photoAttachment {
-          //  postimageview.set(imageUrl: photoAttachment.photoUrlString)
-           postImageView.isHidden = false
+            postImageView.set(imageUrl: photoAttachment.photoUrlString)//change this line
+            postImageView.isHidden = false
         } else {
-           postImageView.isHidden = true
+            postImageView.isHidden = true
         }
         
     }
