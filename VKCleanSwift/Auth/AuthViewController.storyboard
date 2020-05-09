@@ -17,11 +17,11 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIs-0Q-Qr4" customClass="TKTransitionSubmitButton" customModule="VKCleanSwift" customModuleProvider="target">
                                 <rect key="frame" x="132" y="373" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.31602886320000001" green="0.4588603973" blue="0.60445028540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="9zb-aF-LtL"/>
                                     <constraint firstAttribute="width" constant="150" id="VL7-ov-ug8"/>
                                 </constraints>
-                                <state key="normal" image="vk-512 2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="spinnerColor">
                                         <color key="value" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,7 +48,4 @@
             <point key="canvasLocation" x="28.985507246376812" y="167.41071428571428"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="vk-512 2" width="512" height="512"/>
-    </resources>
 </document>
