@@ -14,34 +14,9 @@
                     <view key="view" contentMode="scaleToFill" id="14Q-N7-RTn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIs-0Q-Qr4" customClass="TKTransitionSubmitButton" customModule="VKCleanSwift" customModuleProvider="target">
-                                <rect key="frame" x="132" y="373" width="150" height="150"/>
-                                <color key="backgroundColor" red="0.31602886320000001" green="0.4588603973" blue="0.60445028540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="9zb-aF-LtL"/>
-                                    <constraint firstAttribute="width" constant="150" id="VL7-ov-ug8"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="spinnerColor">
-                                        <color key="value" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="normalCornerRadius">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="kIs-0Q-Qr4" firstAttribute="centerY" secondItem="14Q-N7-RTn" secondAttribute="centerY" id="EjV-ik-y3H"/>
-                            <constraint firstItem="kIs-0Q-Qr4" firstAttribute="centerX" secondItem="14Q-N7-RTn" secondAttribute="centerX" id="JfW-g2-xhb"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VaE-dj-VSg"/>
                     </view>
-                    <connections>
-                        <outlet property="imageLogo" destination="kIs-0Q-Qr4" id="WPa-h3-iA6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPg-Ac-2Qi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

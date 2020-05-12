@@ -8,50 +8,103 @@
 
 import UIKit
 
-class AuthViewController: UIViewController ,UIViewControllerTransitioningDelegate{
+class AuthViewController: UIViewController {
     
+    //MARK: - Property
     private var authServise: AuthServise!
     var button: TKTransitionSubmitButton!
+    let splashImage = UIImageView(image: UIImage(named: "drib"))
+    let splashView = UIView()
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.default
+    }
     
-  //  @IBOutlet weak var btnFromNib: TKTransitionSubmitButton!
-    @IBOutlet weak var imageLogo: TKTransitionSubmitButton!
-    
+    //MARK: - ViewLifeCicle
+    override func viewDidAppear(_ animated: Bool) {
+        startLoadingAnimation()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.shared.setStatusBarStyle(.lightContent, animated: false)
-        
-
-               
-               button = TKTransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 64, height: 44))
-               button.center = self.view.center
-               button.setTitle("Sign in", for: UIControl.State())
-               button.frame.bottom = self.view.frame.height - 60
-               button.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 14)
-               button.addTarget(self, action: #selector(AuthViewController.signInTouch(_:)), for: UIControl.Event.touchUpInside)
-               button.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.7254901961, blue: 0.9529411765, alpha: 1)
-             
-               self.view.addSubview(button)
-               button.isHidden = true
-               imageLogo.animate(3) {
-                self.button.isHidden = false
-                self.imageLogo.isHidden = true
-               }
-               authServise = AppDelegate.shared().authServise
+        setup()
     }
+    
+    //MARK: - setup
+    func setup() {
+        button = TKTransitionSubmitButton(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width - 64, height: 44))
+        button.center = self.view.center
+        button.setTitle("Sign in", for: UIControl.State())
+        button.frame.bottom = self.view.frame.height - 60
+        button.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 14)
+        button.addTarget(self, action: #selector(AuthViewController.signInTouch(_:)), for: UIControl.Event.touchUpInside)
+        button.backgroundColor = UIColor.systemTeal// colorLiteral(red: 0.3333333333, green: 0.7254901961, blue: 0.9529411765, alpha: 1)
+        
+        self.view.addSubview(button)
+        button.isHidden = true
+        
+        splashView.backgroundColor = UIColor.systemTeal
+        view.addSubview(splashView)
+        splashView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        splashImage.contentMode = .scaleAspectFit
+        splashView.addSubview(splashImage)
+        splashImage.frame = CGRect(x: splashView.frame.midX - 75, y: splashView.frame.midY - 75, width: 150, height: 150)
+        
+        authServise = AppDelegate.shared().authServise
+    }
+  
+    
+    //MARK: - Action
     @IBAction func signInTouch(_ button: TKTransitionSubmitButton) {
-        button.animate(1) {
+        button.animate(2.5) {
             self.authServise.wakeUpSession()
         }
         
     }
 
-       // MARK: UIViewControllerTransitioningDelegate
-       func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    // MARK: - UIViewControllerTransitioningDelegate
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
            return TKFadeInAnimator(transitionDuration: 0.5, startingAlpha: 0.8)
        }
        
-       func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
            return nil
        }
     
+}
+extension AuthViewController: UIViewControllerTransitioningDelegate {
+    func startLoadingAnimation() {
+          scaleDownAnimation()
+      }
+    
+      func scaleDownAnimation() {
+          UIView.animate(withDuration: 1.0, delay: 0.1,options: .curveLinear, animations: {
+           // self.splashImage.layer.addSublayer(self.spiner)
+           // self.spiner.animation()
+            self.splashImage.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            
+              }){( success ) in
+                     self.scaleUpAnimation()
+                 }
+             }
+             
+      func rotateAnimation() {
+          UIView.animate(withDuration: 0.5, animations: {
+            self.splashImage.transform = CGAffineTransform(rotationAngle: CGFloat(-15))
+              }) { (succes) in
+                     
+                 }
+             }
+          
+      func scaleUpAnimation() {
+                 UIView.animate(withDuration: 0.35, delay: 0.2, options: .curveLinear, animations: {
+                     self.splashImage.transform = CGAffineTransform(scaleX: 5, y: 5)
+                    // self.spiner.stopAnimation()
+                 }) { (success) in
+                     self.removeSplashScreen()
+                 }
+             }
+             
+      func removeSplashScreen () {
+                 splashView.removeFromSuperview()
+        button.isHidden = false
+             }
 }
