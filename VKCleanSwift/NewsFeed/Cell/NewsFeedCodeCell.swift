@@ -83,6 +83,11 @@ final class NewsFeedCodeCell: UITableViewCell {
          overlayThirdLayer() // Third layer
     }
     func set(viewModel: FeedCellViewModel) {
+        
+        iconImageView.set(imageUrl: viewModel.iconUrlString)
+        nameLabel.text = viewModel.name
+        dateLabel.text = viewModel.date
+        postLabel.text = viewModel.text
  
         postLabel.frame = viewModel.sizes.postLabelFrame
         postImageView.frame = viewModel.sizes.attachmentFrame
@@ -131,14 +136,17 @@ final class NewsFeedCodeCell: UITableViewCell {
         nameLabel.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: -8).isActive = true
         nameLabel.topAnchor.constraint(equalTo: topView.topAnchor, constant: 2).isActive = true
         nameLabel.heightAnchor.constraint(equalToConstant: Constants.topViewHeight / 2 - 2).isActive = true
+        
+        //dateLabel constraints
+        dateLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 8).isActive = true
+        dateLabel.trailingAnchor.constraint(equalTo: topView.trailingAnchor, constant: -8).isActive = true
+        dateLabel.bottomAnchor.constraint(equalTo: topView.bottomAnchor, constant: -2).isActive = true
+        dateLabel.heightAnchor.constraint(equalToConstant: 14).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
-    
+   
     
 }
