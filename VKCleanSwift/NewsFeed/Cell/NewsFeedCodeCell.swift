@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
-
+protocol NewsfeedCodeCellDelegate: class {
+    func reavalPost(for cell: NewsFeedCodeCell)
+}
 final class NewsFeedCodeCell: UITableViewCell {
     
     static let reuseId = "NewsFeedCodeCell"
+    
+    weak var delegate: NewsfeedCodeCellDelegate?
+    
     //MARK: - First layer in TopView
     let cardView: UIView = {
         let view = UIView()
@@ -34,6 +39,15 @@ final class NewsFeedCodeCell: UITableViewCell {
         label.font = Constants.postLabelFont
         label.textColor =  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         return label
+    }()
+    let moreTextButton: UIButton = {
+        let button = UIButton()
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        button.setTitleColor(#colorLiteral(red: 0.4, green: 0.6235294118, blue: 0.831372549, alpha: 1), for: .normal)
+        button.contentHorizontalAlignment = .left
+        button.contentVerticalAlignment = .center
+        button.setTitle("Показать полностью...", for: .normal)
+        return button
     }()
     let postImageView: WebImageView = {
         let imageView = WebImageView()
@@ -167,12 +181,16 @@ final class NewsFeedCodeCell: UITableViewCell {
          cardView.layer.cornerRadius = 10
          cardView.clipsToBounds = true
         
+        moreTextButton.addTarget(self, action: #selector(moreTextButtonTouch), for: .touchUpInside)
         
          overlayFirstLayer()  // First layer
          overlaySecondLayer() // Second layer
          overlayThirdLayeronTopView() // Third layer in TopView
          overlayThirdLayeronBottomView() // Third layer in BottomView
          overlayFourLayerinBottomView() //Four layer in BottomView
+    }
+    @objc func moreTextButtonTouch() {
+        delegate?.reavalPost(for: self)
     }
     func set(viewModel: FeedCellViewModel) {
         
@@ -188,6 +206,7 @@ final class NewsFeedCodeCell: UITableViewCell {
         postLabel.frame = viewModel.sizes.postLabelFrame
         postImageView.frame = viewModel.sizes.attachmentFrame
         bottomView.frame = viewModel.sizes.bottomView
+        moreTextButton.frame = viewModel.sizes.moreTextButtonFrame
         
         
         
@@ -207,6 +226,7 @@ final class NewsFeedCodeCell: UITableViewCell {
     private func overlaySecondLayer() {
         cardView.addSubview(topView)
         cardView.addSubview(postLabel)
+        cardView.addSubview(moreTextButton)
         cardView.addSubview(postImageView)
         cardView.addSubview(bottomView)
         

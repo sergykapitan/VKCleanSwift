@@ -16,7 +16,8 @@ protocol NewsFeedDisplayLogic: class {
     func displayData(viewModel: NewsFeed.Model.ViewModel.ViewModelData)
 }
 
-class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic {
+class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic,NewsfeedCodeCellDelegate {
+
     
     var interactor: NewsFeedBusinessLogic?// NewGitHubBusinessLogic?
     var router: (NSObjectProtocol & NewsFeedRoutingLogic)?
@@ -66,7 +67,10 @@ class NewsFeedViewController: UIViewController, NewsFeedDisplayLogic {
        
         }
     }
-    
+    //MARK - NewsfeedCodeCellDelegate
+    func reavalPost(for cell: NewsFeedCodeCell) {
+        print("Wery Well")
+    }
 }
 
 extension NewsFeedViewController: UITableViewDelegate,UITableViewDataSource {
@@ -79,6 +83,7 @@ extension NewsFeedViewController: UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsFeedCodeCell.reuseId, for: indexPath) as! NewsFeedCodeCell
         let cellViewModel = feedViewModel.cells[indexPath.row]
         cell.set(viewModel: cellViewModel)
+        cell.delegate = self
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
