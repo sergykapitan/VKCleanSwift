@@ -156,7 +156,18 @@ final class NewsFeedCodeCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = UIColor.systemTeal
+        
+       //  backgroundColor = UIColor.systemTeal
+         iconImageView.layer.cornerRadius = Constants.topViewHeight / 2
+         iconImageView.clipsToBounds = true
+         
+         backgroundColor = .clear
+         selectionStyle = .none
+        
+         cardView.layer.cornerRadius = 10
+         cardView.clipsToBounds = true
+        
+        
          overlayFirstLayer()  // First layer
          overlaySecondLayer() // Second layer
          overlayThirdLayeronTopView() // Third layer in TopView
