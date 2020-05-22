@@ -215,12 +215,12 @@
 			children = (
 				88792D21231EC59A00C4AEE6 /* Cell */,
 				88792D15231E893100C4AEE6 /* NewsFeedViewController.swift */,
-				88792D1F231E906C00C4AEE6 /* NewsFeedViewController.storyboard */,
 				88792D11231E893100C4AEE6 /* NewsFeedInteractor.swift */,
 				88792D13231E893100C4AEE6 /* NewsFeedPresenter.swift */,
 				88792D12231E893100C4AEE6 /* NewsFeedModels.swift */,
 				88792D16231E893100C4AEE6 /* NewsFeedWorker.swift */,
 				88792D14231E893100C4AEE6 /* NewsFeedRouter.swift */,
+				88792D1F231E906C00C4AEE6 /* NewsFeedViewController.storyboard */,
 			);
 			path = NewsFeed;
 			sourceTree = "<group>";
