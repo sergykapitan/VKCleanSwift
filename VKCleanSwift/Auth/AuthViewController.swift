@@ -77,8 +77,8 @@ extension AuthViewController: UIViewControllerTransitioningDelegate {
     
       func scaleDownAnimationLaunchScreen() {
           UIView.animate(withDuration: 1.0, delay: 0.1,options: .curveLinear, animations: {
-            self.splashImage.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-            
+            self.splashImage.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+ 
               }){( success ) in
                      self.scaleUpAnimationLaunchScreen()
                  }
@@ -94,7 +94,8 @@ extension AuthViewController: UIViewControllerTransitioningDelegate {
           
       func scaleUpAnimationLaunchScreen() {
                  UIView.animate(withDuration: 0.35, delay: 0.2, options: .curveLinear, animations: {
-                     self.splashImage.transform = CGAffineTransform(scaleX: 5, y: 5)
+                    self.splashImage.removeFromSuperview()
+                    // self.splashImage.transform = CGAffineTransform(scaleX: 5, y: 5)
                     // self.spiner.stopAnimation()
                  }) { (success) in
                      self.removeSplashScreenLaunchScreen()
