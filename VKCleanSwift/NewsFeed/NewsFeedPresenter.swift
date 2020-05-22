@@ -33,18 +33,18 @@ class NewsFeedPresenter: NewsFeedPresentationLogic {
     func presentData(response: NewsFeed.Model.Response.ResponseType) {
         switch response {
 
-        case .presentNewsFeed(let feed):
+        case .presentNewsFeed(let feed, let revalPostIds):
+            
+            print(revalPostIds)
+            
             let cells = feed.items.map { (feedItem)  in
-                cellViewModel(from: feedItem, profiles: feed.profiles, groups: feed.groups)
+                cellViewModel(from: feedItem, profiles: feed.profiles, groups: feed.groups, revalPostIds: revalPostIds)
             }
-            
-            
-            
             let feedViewModel = FeedViewModel.init(cells: cells)
             viewController?.displayData(viewModel: NewsFeed.Model.ViewModel.ViewModelData.displayNewsFeed(feedViewModel: feedViewModel))
         }
     }
-    private func cellViewModel(from feedItem: FeedItem, profiles: [Profile], groups: [Group]) -> FeedViewModel.Cell {
+    private func cellViewModel(from feedItem: FeedItem, profiles: [Profile], groups: [Group],revalPostIds: [Int]) -> FeedViewModel.Cell {
         
         
         let photoAttachment = self.photoAttachment(feedItem: feedItem)
@@ -53,9 +53,15 @@ class NewsFeedPresenter: NewsFeedPresentationLogic {
         let date = Date(timeIntervalSince1970: feedItem.date)
         let dateTitle = dateFormatter.string(from: date)
         
-        let sizes = cellLayoutCalculate.sizes(postText: feedItem.text, photoAttachment: photoAttachment )
+        let isFullSize = revalPostIds.contains { (postIds) -> Bool in
+            return postIds == feedItem.postId
+        }
+    //    let isFullSize2 = revalPostIds.contains(feedItem.postId)
         
-        return FeedViewModel.Cell.init(iconUrlString: profile.photo,
+        let sizes = cellLayoutCalculate.sizes(postText: feedItem.text, photoAttachment: photoAttachment, isFullSizePost: isFullSize )
+        
+        return FeedViewModel.Cell.init(postId: feedItem.postId,
+                                       iconUrlString: profile.photo,
                                        name: profile.name,
                                        date: dateTitle,
                                        text: feedItem.text,
