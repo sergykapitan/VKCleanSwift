@@ -21,7 +21,7 @@ class AuthViewController: UIViewController {
     
     //MARK: - ViewLifeCicle
     override func viewDidAppear(_ animated: Bool) {
-        startLoadingAnimation()
+        startLoadingAnimationLaunchScreen()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class AuthViewController: UIViewController {
         button.frame.bottom = self.view.frame.height - 60
         button.titleLabel?.font = UIFont(name: "HelveticaNeue-Light", size: 14)
         button.addTarget(self, action: #selector(AuthViewController.signInTouch(_:)), for: UIControl.Event.touchUpInside)
-        button.backgroundColor = UIColor.systemTeal// colorLiteral(red: 0.3333333333, green: 0.7254901961, blue: 0.9529411765, alpha: 1)
+        button.backgroundColor = UIColor.systemTeal
         
         self.view.addSubview(button)
         button.isHidden = true
@@ -71,22 +71,20 @@ class AuthViewController: UIViewController {
     
 }
 extension AuthViewController: UIViewControllerTransitioningDelegate {
-    func startLoadingAnimation() {
-          scaleDownAnimation()
+    func startLoadingAnimationLaunchScreen() {
+          scaleDownAnimationLaunchScreen()
       }
     
-      func scaleDownAnimation() {
+      func scaleDownAnimationLaunchScreen() {
           UIView.animate(withDuration: 1.0, delay: 0.1,options: .curveLinear, animations: {
-           // self.splashImage.layer.addSublayer(self.spiner)
-           // self.spiner.animation()
             self.splashImage.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
             
               }){( success ) in
-                     self.scaleUpAnimation()
+                     self.scaleUpAnimationLaunchScreen()
                  }
              }
              
-      func rotateAnimation() {
+      func rotateAnimationLaunchScreen() {
           UIView.animate(withDuration: 0.5, animations: {
             self.splashImage.transform = CGAffineTransform(rotationAngle: CGFloat(-15))
               }) { (succes) in
@@ -94,16 +92,16 @@ extension AuthViewController: UIViewControllerTransitioningDelegate {
                  }
              }
           
-      func scaleUpAnimation() {
+      func scaleUpAnimationLaunchScreen() {
                  UIView.animate(withDuration: 0.35, delay: 0.2, options: .curveLinear, animations: {
                      self.splashImage.transform = CGAffineTransform(scaleX: 5, y: 5)
                     // self.spiner.stopAnimation()
                  }) { (success) in
-                     self.removeSplashScreen()
+                     self.removeSplashScreenLaunchScreen()
                  }
              }
              
-      func removeSplashScreen () {
+      func removeSplashScreenLaunchScreen () {
                  splashView.removeFromSuperview()
         button.isHidden = false
              }
