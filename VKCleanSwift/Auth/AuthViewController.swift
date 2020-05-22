@@ -21,7 +21,7 @@ class AuthViewController: UIViewController {
     
     //MARK: - ViewLifeCicle
     override func viewDidAppear(_ animated: Bool) {
-        startLoadingAnimation()
+        startLoadingAnimationLaunchScreen()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,22 +71,21 @@ class AuthViewController: UIViewController {
     
 }
 extension AuthViewController: UIViewControllerTransitioningDelegate {
-    func startLoadingAnimation() {
-          scaleDownAnimation()
+    func startLoadingAnimationLaunchScreen() {
+          scaleDownAnimationLaunchScreen()
       }
     
-      func scaleDownAnimation() {
+      func scaleDownAnimationLaunchScreen() {
           UIView.animate(withDuration: 1.0, delay: 0.1,options: .curveLinear, animations: {
-           // self.splashImage.layer.addSublayer(self.spiner)
-           // self.spiner.animation()
-            self.splashImage.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            self.splashImage.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            
             
               }){( success ) in
-                     self.scaleUpAnimation()
+                     self.scaleUpAnimationLaunchScreen()
                  }
              }
              
-      func rotateAnimation() {
+      func rotateAnimationLaunchScreen() {
           UIView.animate(withDuration: 0.5, animations: {
             self.splashImage.transform = CGAffineTransform(rotationAngle: CGFloat(-15))
               }) { (succes) in
@@ -94,16 +93,17 @@ extension AuthViewController: UIViewControllerTransitioningDelegate {
                  }
              }
           
-      func scaleUpAnimation() {
+      func scaleUpAnimationLaunchScreen() {
                  UIView.animate(withDuration: 0.35, delay: 0.2, options: .curveLinear, animations: {
-                     self.splashImage.transform = CGAffineTransform(scaleX: 5, y: 5)
+                    self.splashImage.removeFromSuperview()
+                    // self.splashImage.transform = CGAffineTransform(scaleX: 5, y: 5)
                     // self.spiner.stopAnimation()
                  }) { (success) in
-                     self.removeSplashScreen()
+                     self.removeSplashScreenLaunchScreen()
                  }
              }
              
-      func removeSplashScreen () {
+      func removeSplashScreenLaunchScreen () {
                  splashView.removeFromSuperview()
         button.isHidden = false
              }
