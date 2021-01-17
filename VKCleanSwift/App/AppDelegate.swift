@@ -12,7 +12,6 @@ import VKSdkFramework
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, AuthServiseDelegate {
 
-    // change App Delegate 
 
     var window: UIWindow?
     
